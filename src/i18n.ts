@@ -3,19 +3,23 @@ import { initReactI18next } from 'react-i18next';
 import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector';
 import commonEn from './translations/en/common.json';
 import commonEt from './translations/et/common.json';
+import commonEs from './translations/es/common.json';
 
 i18n
   .use(I18nextBrowserLanguageDetector)
   .use(initReactI18next)
   .init({
     fallbackLng: window._env_.FALLBACK_LANGUAGE ?? "et",
-    supportedLngs: ['et', 'en'],
+    supportedLngs: ['et', 'en', 'es'],
     resources: {
       en: {
         common: commonEn,
       },
       et: {
         common: commonEt,
+      },
+      es: {
+        common: commonEs,
       },
     },
     defaultNS: 'common',
